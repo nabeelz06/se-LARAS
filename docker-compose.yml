@@ -1,0 +1,23 @@
+# Jalankan: cp .env.example .env  (isi SESSION_SECRET), lalu: docker compose up --build
+# Seed contoh (opsional, klip sintetis BUKAN Ludruk): docker compose run --rm laras node src/seed.js
+services:
+  laras:
+    build: .
+    image: se-laras:0.3
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATA_DIR: /data
+      NODE_ENV: production
+      # gagal dengan pesan jelas bila belum diisi (di .env atau lingkungan)
+      SESSION_SECRET: ${SESSION_SECRET:?Isi SESSION_SECRET (minimal 16 karakter acak) di .env}
+    ports:
+      - "3000:3000"
+    volumes:
+      - laras-data:/data
+    restart: unless-stopped
+    # batas sumber daya supaya satu analisis klip tidak menghabiskan server kecil
+    mem_limit: 2g
+volumes:
+  laras-data:

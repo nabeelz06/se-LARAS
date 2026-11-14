@@ -1,0 +1,51 @@
+/* se-LARAS — token desain. Warna dan bentuk diambil dari panggung dan kain Ludruk: merah tirai, hitam panggung, emas prada, biru wedel, kertas lontar. */
+@font-face { font-family: 'Fraunces'; src: url('/fonts/fraunces-soft.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Fraunces'; src: url('/fonts/fraunces-italic.woff2') format('woff2'); font-weight: 100 900; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Plus Jakarta Sans'; src: url('/fonts/jakarta-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Plus Jakarta Sans'; src: url('/fonts/jakarta-latin-ext.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Noto Sans Javanese'; src: url('/fonts/noto-javanese-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+A980-A9DF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Sans Javanese'; src: url('/fonts/noto-javanese-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+A980-A9DF, U+200C-200D, U+25CC; }
+
+:root {
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-jawa: 'Noto Sans Javanese', 'Noto Sans', serif;
+  --fs-xs: .78rem; --fs-sm: .88rem; --fs-md: 1rem; --fs-lg: 1.15rem; --fs-xl: clamp(1.35rem, 1.1rem + 1vw, 1.7rem);
+  --fs-2xl: clamp(1.7rem, 1.2rem + 2vw, 2.4rem); --fs-3xl: clamp(2.1rem, 1.3rem + 3.6vw, 3.6rem); --fs-hero: clamp(2.4rem, 1.2rem + 5.4vw, 4.6rem);
+  --r-sm: 8px; --r: 14px; --r-lg: 22px; --r-xl: 32px; --r-pill: 999px;
+  --maxw: 1200px; --bar-h: 64px; --tabbar-h: 68px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  /* warna tetap (panggung) */
+  --stage-0: #120a09; --stage-1: #2a0e12; --stage-2: #5b1019; --stage-3: #8c1c26;
+  --on-stage: #fbf1de; --on-stage-2: #e9d6b4;
+  --gold: #d9a32f; --gold-hi: #f1c866; --gold-lo: #9a6d14;
+  --kain-teal: #1b6b66; --kain-indigo: #243f6e; --kain-ochre: #a15e12;
+}
+
+:root, [data-theme='terang'] {
+  color-scheme: light;
+  --bg: #f6efdf; --bg-2: #efe5cd; --surface: #fffaf0; --surface-2: #fbf3e2; --surface-3: #f3e8d0;
+  --text: #211914; --text-2: #4b3e34; --text-3: #6a5b4f; --line: #dccfb3; --line-2: #c9b994;
+  --primary: #8c1c26; --primary-hi: #a8222f; --on-primary: #fff7ea; --link: #8c1c26; --link-hover: #5e1018;
+  --accent: #b7821a; --accent-soft: #f4e2b4; --accent-text: #6f4b08;
+  --near: #1b6b66; --near-bg: #d8ece8; --high: #8f520e; --high-bg: #f6e2c3; --low: #243f6e; --low-bg: #dbe3f3; --na: #6a5b4f; --na-bg: #ece3d0;
+  --ok: #1b6b66; --warn: #8f520e; --danger: #a3182a; --danger-bg: #f8dcdc; --info: #243f6e; --info-bg: #dbe3f3;
+  --focus: #1f4fbf; --shadow-1: 0 1px 2px rgb(60 40 20 / .08), 0 4px 14px rgb(60 40 20 / .06); --shadow-2: 0 2px 4px rgb(60 40 20 / .08), 0 14px 40px rgb(60 40 20 / .14);
+  --glass: rgb(246 239 223 / .82); --veil: rgb(33 25 20 / .45);
+}
+[data-theme='gelap'] {
+  color-scheme: dark;
+  --bg: #130e0c; --bg-2: #1a1310; --surface: #211915; --surface-2: #2a201b; --surface-3: #342922;
+  --text: #f6ecd9; --text-2: #dccbad; --text-3: #b9a68a; --line: #3b2f27; --line-2: #54453a;
+  --primary: #b32636; --primary-hi: #c8344a; --on-primary: #fff7ea; --link: #f4a0a6; --link-hover: #ffc9cc;
+  --accent: #e3b248; --accent-soft: #3a2c10; --accent-text: #f1c866;
+  --near: #6fd0c8; --near-bg: #123a37; --high: #f0b765; --high-bg: #3d2a0e; --low: #9fb8ee; --low-bg: #1c2b4a; --na: #b9a68a; --na-bg: #2d241e;
+  --ok: #6fd0c8; --warn: #f0b765; --danger: #ff9aa2; --danger-bg: #4a1a20; --info: #9fb8ee; --info-bg: #1c2b4a;
+  --focus: #8fb1ff; --shadow-1: 0 1px 2px rgb(0 0 0 / .4), 0 4px 14px rgb(0 0 0 / .3); --shadow-2: 0 2px 4px rgb(0 0 0 / .4), 0 14px 40px rgb(0 0 0 / .5);
+  --glass: rgb(19 14 12 / .82); --veil: rgb(0 0 0 / .6);
+}

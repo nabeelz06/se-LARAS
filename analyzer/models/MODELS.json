@@ -1,0 +1,33 @@
+{
+  "_catatan": "Asal, versi, dan checksum model bawaan. Setiap berkas dicocokkan BYTE-PER-BYTE dengan unduhan dari URL-nya pada 2026-11-14. Dijaga oleh analyzer/tests/test_models.py (offline) dan `python3 verify_models.py --online` (unduh ulang). Mengganti model berarti mengubah berkas ini DAN mengulang evaluasi (python3 evaluate.py all): angka di evaluation/results.json hanya berlaku untuk berkas yang tercatat di sini.",
+  "silero_vad.onnx": {
+    "model": "Silero VAD",
+    "versi": "6.2 (identik dengan tag v6.2, v6.2.1, v6.2.2, v6.2.3 dan cabang master per 2026-11-14; BERBEDA dari v5.1 dan v6.0/v6.1)",
+    "url": "https://raw.githubusercontent.com/snakers4/silero-vad/v6.2.3/src/silero_vad/data/silero_vad.onnx",
+    "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3",
+    "ukuran": 2327524,
+    "lisensi": "MIT",
+    "berkas_lisensi": "LICENSE-silero-vad.txt",
+    "dipakai_oleh": "vad.py"
+  },
+  "yolox_s.onnx": {
+    "model": "YOLOX-S (deteksi orang)",
+    "versi": "aset rilis 0.1.1rc0 dari Megvii-BaseDetection/YOLOX",
+    "url": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx",
+    "sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+    "ukuran": 35858002,
+    "lisensi": "Apache-2.0",
+    "berkas_lisensi": "LICENSE-yolox.txt",
+    "dipakai_oleh": "detect.py"
+  },
+  "pose_landmark_full.tflite": {
+    "model": "BlazePose GHUM full (pose)",
+    "versi": "dari tag v0.8.9 repositori google/mediapipe (jalur mediapipe/modules/pose_landmark/); tidak ada di cabang master saat ini",
+    "url": "https://raw.githubusercontent.com/google/mediapipe/v0.8.9/mediapipe/modules/pose_landmark/pose_landmark_full.tflite",
+    "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+    "ukuran": 6440512,
+    "lisensi": "Apache-2.0",
+    "berkas_lisensi": "LICENSE-mediapipe.txt",
+    "dipakai_oleh": "posecore.py"
+  }
+}

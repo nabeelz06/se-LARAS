@@ -1,0 +1,29 @@
+{
+ "dibuat": "2026-11-14 07:29:32",
+ "sumber": "evaluation/results.json (dibuat oleh evaluate.py all)",
+ "lantai": {
+  "pause_mean_s": 0.025,
+  "long_pauses_per_min": 0.024,
+  "onset_rate_per_s": 1.1,
+  "speech_ratio": 0.03,
+  "dynamic_range_db": 3.9,
+  "pitch_range_st": 0.2,
+  "wrist_speed_mean": 0.36,
+  "torso_lean_std_deg": 0.93,
+  "gesture_speech_lag_s": 0.2
+ },
+ "rapuh_terhadap_derau": [
+  "pause_mean_s",
+  "long_pauses_per_min",
+  "dynamic_range_db",
+  "pitch_range_st"
+ ],
+ "ambang_biaya_penyejajaran": 0.58,
+ "vad": {
+  "threshold": 0.8,
+  "neg_margin": 0.15,
+  "min_silence_ms": 100,
+  "pad_ms": 15,
+  "min_speech_ms": 250
+ }
+}

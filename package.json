@@ -1,0 +1,29 @@
+{
+  "name": "se-laras",
+  "version": "0.3.0",
+  "description": "se-LARAS: arsip pembelajaran Ludruk dari maestro, analisis deskriptif berbantuan AI, dan pembelajaran berbahasa Suroboyoan",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "test": "node --test test/*.test.js",
+    "test:py": "cd analyzer && python3 -I -m unittest discover -s tests -t .",
+    "test:all": "npm run check:ui && npm test && npm run test:py",
+    "eval": "cd analyzer && python3 -I evaluate.py all",
+    "export-dataset": "node scripts/export-dataset.js",
+    "check:ui": "node scripts/check-frontend.mjs",
+    "e2e": "python3 e2e/run_all.py"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "better-sqlite3": "^13.1.1",
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0"
+  }
+}

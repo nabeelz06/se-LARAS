@@ -1,0 +1,8 @@
+# Mesin analisis se-LARAS (runtime). Dikembangkan dan diuji dengan Python 3.13; lihat docs/EVALUASI.md.
+numpy>=2.0
+scipy>=1.13
+librosa>=0.10
+soundfile>=0.12
+opencv-python-headless>=4.9
+onnxruntime>=1.18
+ai-edge-litert>=1.0

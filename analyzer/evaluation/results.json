@@ -1,0 +1,1688 @@
+{
+ "jeda": {
+  "klip_latih": [
+   "jfk.wav",
+   "LJ001-0001.wav"
+  ],
+  "klip_uji": [
+   "sample.wav",
+   "silero_test.wav"
+  ],
+  "panjang_sisipan_detik": [
+   0.3,
+   0.5,
+   0.8,
+   1.2,
+   2.0
+  ],
+  "kombinasi_dicoba": 576,
+  "fungsi_tujuan": "recall rata-rata - 0,1 x jeda_ekstra_per_menit rata-rata (himpunan latih)",
+  "setelan_hasil_penalaan": {
+   "threshold": 0.8,
+   "neg_margin": 0.15,
+   "min_silence_ms": 100,
+   "pad_ms": 15,
+   "min_speech_ms": 250
+  },
+  "setelan_bawaan_kode": {
+   "threshold": 0.8,
+   "neg_margin": 0.15,
+   "min_speech_ms": 250,
+   "min_silence_ms": 100,
+   "pad_ms": 15
+  },
+  "setelan_resmi_silero": {
+   "threshold": 0.5,
+   "neg_margin": 0.15,
+   "min_speech_ms": 250,
+   "min_silence_ms": 100,
+   "pad_ms": 30
+  },
+  "aturan_pemilihan": "dari kandidat yang recall bingkai ujaran pada suara-diubah >= 0.95 (himpunan latih): tujuan terbaik; bila selisih <= 0,01 pilih yang terdekat dengan bawaan resmi Silero (0,5 / 0,15 / 250 md / 100 md / 30 md)",
+  "kandidat_setara": 24,
+  "tujuan_terbaik": 0.943,
+  "tujuan_terbaik_tanpa_syarat": 0.943,
+  "kompromi_per_ambang": [
+   {
+    "threshold": 0.5,
+    "setelan": {
+     "threshold": 0.5,
+     "neg_margin": 0.05,
+     "min_silence_ms": 250,
+     "pad_ms": 0,
+     "min_speech_ms": 150
+    },
+    "tujuan_latih": 0.897,
+    "uji_recall_jeda": 0.85,
+    "uji_jeda_ekstra_per_menit": 0.69,
+    "suara_diubah_recall_latih": 0.974,
+    "suara_diubah_recall_uji": 0.979,
+    "suara_diubah_recall_uji_min": 0.97
+   },
+   {
+    "threshold": 0.6,
+    "setelan": {
+     "threshold": 0.6,
+     "neg_margin": 0.05,
+     "min_silence_ms": 250,
+     "pad_ms": 0,
+     "min_speech_ms": 100
+    },
+    "tujuan_latih": 0.907,
+    "uji_recall_jeda": 0.857,
+    "uji_jeda_ekstra_per_menit": 0.46,
+    "suara_diubah_recall_latih": 0.968,
+    "suara_diubah_recall_uji": 0.977,
+    "suara_diubah_recall_uji_min": 0.97
+   },
+   {
+    "threshold": 0.7,
+    "setelan": {
+     "threshold": 0.7,
+     "neg_margin": 0.05,
+     "min_silence_ms": 100,
+     "pad_ms": 15,
+     "min_speech_ms": 100
+    },
+    "tujuan_latih": 0.924,
+    "uji_recall_jeda": 0.857,
+    "uji_jeda_ekstra_per_menit": 0.67,
+    "suara_diubah_recall_latih": 0.979,
+    "suara_diubah_recall_uji": 0.976,
+    "suara_diubah_recall_uji_min": 0.96
+   },
+   {
+    "threshold": 0.8,
+    "setelan": {
+     "threshold": 0.8,
+     "neg_margin": 0.15,
+     "min_silence_ms": 100,
+     "pad_ms": 15,
+     "min_speech_ms": 100
+    },
+    "tujuan_latih": 0.943,
+    "uji_recall_jeda": 0.862,
+    "uji_jeda_ekstra_per_menit": 0.69,
+    "suara_diubah_recall_latih": 0.977,
+    "suara_diubah_recall_uji": 0.973,
+    "suara_diubah_recall_uji_min": 0.95
+   }
+  ],
+  "suara_diubah_rasio": [
+   0.85,
+   1.2
+  ],
+  "syarat_recall_suara_diubah": 0.95,
+  "suara_diubah_recall_penalaan": {
+   "latih": 0.977,
+   "uji": 0.968,
+   "uji_min": 0.94
+  },
+  "latih_dengan_penalaan": [
+   {
+    "derau": "merah_muda",
+    "snr_db": 20,
+    "recall": 0.933,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 0.67,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.067,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "merah_muda",
+    "snr_db": 10,
+    "recall": 0.933,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 0.67,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.101,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "merah_muda",
+    "snr_db": 5,
+    "recall": 0.867,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 0.33,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.117,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "putih",
+    "snr_db": 20,
+    "recall": 1.0,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 1.0,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.067,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "putih",
+    "snr_db": 10,
+    "recall": 0.933,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 0.67,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.094,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "putih",
+    "snr_db": 5,
+    "recall": 0.933,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 0.67,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.091,
+    "jeda_ekstra_per_menit": 0.0
+   },
+   {
+    "derau": "tanpa",
+    "snr_db": null,
+    "recall": 1.0,
+    "n_sisipan": 15,
+    "recall_per_panjang": {
+     "0.3": 1.0,
+     "0.5": 1.0,
+     "0.8": 1.0,
+     "1.2": 1.0
+    },
+    "galat_lama_detik": 0.076,
+    "jeda_ekstra_per_menit": 0.0
+   }
+  ],
+  "uji": {
+   "silero_penalaan": [
+    {
+     "derau": "merah_muda",
+     "snr_db": 20,
+     "recall": 0.862,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.47,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.154,
+     "jeda_ekstra_per_menit": 0.44
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 10,
+     "recall": 0.862,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.47,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.142,
+     "jeda_ekstra_per_menit": 0.58
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 5,
+     "recall": 0.879,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.53,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.146,
+     "jeda_ekstra_per_menit": 1.17
+    },
+    {
+     "derau": "putih",
+     "snr_db": 20,
+     "recall": 0.879,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.53,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.131,
+     "jeda_ekstra_per_menit": 0.44
+    },
+    {
+     "derau": "putih",
+     "snr_db": 10,
+     "recall": 0.845,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.4,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.148,
+     "jeda_ekstra_per_menit": 0.88
+    },
+    {
+     "derau": "putih",
+     "snr_db": 5,
+     "recall": 0.793,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.27,
+      "0.5": 0.94,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.153,
+     "jeda_ekstra_per_menit": 1.02
+    },
+    {
+     "derau": "tanpa",
+     "snr_db": null,
+     "recall": 1.0,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 1.0,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.093,
+     "jeda_ekstra_per_menit": 0.15
+    }
+   ],
+   "silero_resmi": [
+    {
+     "derau": "merah_muda",
+     "snr_db": 20,
+     "recall": 0.776,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.13,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.123,
+     "jeda_ekstra_per_menit": 1.46
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 10,
+     "recall": 0.776,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.2,
+      "0.5": 0.94,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.147,
+     "jeda_ekstra_per_menit": 1.75
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 5,
+     "recall": 0.759,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.2,
+      "0.5": 0.88,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.214,
+     "jeda_ekstra_per_menit": 1.75
+    },
+    {
+     "derau": "putih",
+     "snr_db": 20,
+     "recall": 0.776,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.13,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.118,
+     "jeda_ekstra_per_menit": 1.75
+    },
+    {
+     "derau": "putih",
+     "snr_db": 10,
+     "recall": 0.724,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.13,
+      "0.5": 0.81,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.15,
+     "jeda_ekstra_per_menit": 1.75
+    },
+    {
+     "derau": "putih",
+     "snr_db": 5,
+     "recall": 0.707,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.88,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.22,
+     "jeda_ekstra_per_menit": 1.75
+    },
+    {
+     "derau": "tanpa",
+     "snr_db": null,
+     "recall": 0.845,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.4,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.07,
+     "jeda_ekstra_per_menit": 0.0
+    }
+   ],
+   "energi_cara_lama": [
+    {
+     "derau": "merah_muda",
+     "snr_db": 20,
+     "recall": 0.121,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.31,
+      "0.8": 0.14,
+      "1.2": 0.0,
+      "2.0": 0.09
+     },
+     "galat_lama_detik": 0.276,
+     "jeda_ekstra_per_menit": 2.92
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 10,
+     "recall": 0.0,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.0,
+      "0.8": 0.0,
+      "1.2": 0.0,
+      "2.0": 0.0
+     },
+     "galat_lama_detik": null,
+     "jeda_ekstra_per_menit": 0.0
+    },
+    {
+     "derau": "merah_muda",
+     "snr_db": 5,
+     "recall": 0.0,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.0,
+      "0.8": 0.0,
+      "1.2": 0.0,
+      "2.0": 0.0
+     },
+     "galat_lama_detik": null,
+     "jeda_ekstra_per_menit": 0.0
+    },
+    {
+     "derau": "putih",
+     "snr_db": 20,
+     "recall": 0.155,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.19,
+      "0.8": 0.29,
+      "1.2": 0.11,
+      "2.0": 0.27
+     },
+     "galat_lama_detik": 0.421,
+     "jeda_ekstra_per_menit": 2.04
+    },
+    {
+     "derau": "putih",
+     "snr_db": 10,
+     "recall": 0.0,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.0,
+      "0.8": 0.0,
+      "1.2": 0.0,
+      "2.0": 0.0
+     },
+     "galat_lama_detik": null,
+     "jeda_ekstra_per_menit": 0.0
+    },
+    {
+     "derau": "putih",
+     "snr_db": 5,
+     "recall": 0.0,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.0,
+      "0.5": 0.0,
+      "0.8": 0.0,
+      "1.2": 0.0,
+      "2.0": 0.0
+     },
+     "galat_lama_detik": null,
+     "jeda_ekstra_per_menit": 0.0
+    },
+    {
+     "derau": "tanpa",
+     "snr_db": null,
+     "recall": 0.828,
+     "n_sisipan": 58,
+     "recall_per_panjang": {
+      "0.3": 0.33,
+      "0.5": 1.0,
+      "0.8": 1.0,
+      "1.2": 1.0,
+      "2.0": 1.0
+     },
+     "galat_lama_detik": 0.06,
+     "jeda_ekstra_per_menit": 0.0
+    }
+   ],
+   "silero_penalaan_ringkas": {
+    "recall_rata2": 0.874,
+    "jeda_ekstra_per_menit_rata2": 0.67
+   },
+   "silero_resmi_ringkas": {
+    "recall_rata2": 0.766,
+    "jeda_ekstra_per_menit_rata2": 1.46
+   },
+   "energi_cara_lama_ringkas": {
+    "recall_rata2": 0.158,
+    "jeda_ekstra_per_menit_rata2": 0.71
+   }
+  },
+  "kepekaan_ujaran_pelan": {
+   "klip": [
+    "jfk.wav",
+    "LJ001-0001.wav",
+    "sample.wav",
+    "silero_test.wav"
+   ],
+   "tingkat_ujaran_klip_dbfs": {
+    "jfk.wav": -15.5,
+    "LJ001-0001.wav": -20.3,
+    "sample.wav": -32.1,
+    "silero_test.wav": -23.2
+   },
+   "acuan": "setelan resmi Silero pada klip tanpa pelemahan dan tanpa normalisasi",
+   "recall_bingkai_ujaran_rata2": {
+    "dengan_normalisasi": {
+     "0.5": {
+      "0": 1.0,
+      "-10": 1.0,
+      "-20": 1.0,
+      "-30": 1.0,
+      "-40": 1.0
+     },
+     "0.6": {
+      "0": 0.99,
+      "-10": 0.99,
+      "-20": 0.99,
+      "-30": 0.99,
+      "-40": 1.0
+     },
+     "0.7": {
+      "0": 0.99,
+      "-10": 0.99,
+      "-20": 0.99,
+      "-30": 0.99,
+      "-40": 0.99
+     },
+     "0.8": {
+      "0": 0.99,
+      "-10": 0.99,
+      "-20": 0.99,
+      "-30": 0.99,
+      "-40": 0.98
+     }
+    },
+    "tanpa_normalisasi": {
+     "0.5": {
+      "0": 1.0,
+      "-10": 1.0,
+      "-20": 0.98,
+      "-30": 0.96,
+      "-40": 0.77
+     },
+     "0.6": {
+      "0": 0.99,
+      "-10": 0.99,
+      "-20": 0.97,
+      "-30": 0.94,
+      "-40": 0.69
+     },
+     "0.7": {
+      "0": 0.99,
+      "-10": 0.98,
+      "-20": 0.97,
+      "-30": 0.9,
+      "-40": 0.52
+     },
+     "0.8": {
+      "0": 0.98,
+      "-10": 0.98,
+      "-20": 0.96,
+      "-30": 0.85,
+      "-40": 0.35
+     }
+    }
+   },
+   "alarm_palsu_bingkai_rata2": {
+    "dengan_normalisasi": {
+     "0.5": {
+      "0": 0.005,
+      "-10": 0.005,
+      "-20": 0.005,
+      "-30": 0.005,
+      "-40": 0.0
+     },
+     "0.6": {
+      "0": 0.0,
+      "-10": 0.0,
+      "-20": 0.0,
+      "-30": 0.0,
+      "-40": 0.0
+     },
+     "0.7": {
+      "0": 0.0,
+      "-10": 0.0,
+      "-20": 0.0,
+      "-30": 0.0,
+      "-40": 0.0
+     },
+     "0.8": {
+      "0": 0.0,
+      "-10": 0.0,
+      "-20": 0.0,
+      "-30": 0.0,
+      "-40": 0.0
+     }
+    },
+    "tanpa_normalisasi": {
+     "0.5": {
+      "0": 0.0,
+      "-10": 0.006,
+      "-20": 0.024,
+      "-30": 0.016,
+      "-40": 0.013
+     },
+     "0.6": {
+      "0": 0.0,
+      "-10": 0.004,
+      "-20": 0.016,
+      "-30": 0.005,
+      "-40": 0.004
+     },
+     "0.7": {
+      "0": 0.0,
+      "-10": 0.001,
+      "-20": 0.003,
+      "-30": 0.002,
+      "-40": 0.0
+     },
+     "0.8": {
+      "0": 0.0,
+      "-10": 0.0,
+      "-20": 0.001,
+      "-30": 0.001,
+      "-40": 0.0
+     }
+    }
+   },
+   "per_klip_setelan_bawaan": {
+    "dengan_normalisasi": [
+     {
+      "klip": "jfk.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -15.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -25.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -35.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -45.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -55.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -20.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -30.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -40.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -50.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -60.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -32.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -42.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -52.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -62.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -72.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -23.2,
+      "recall": 0.99
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -33.2,
+      "recall": 0.99
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -43.2,
+      "recall": 0.99
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -53.2,
+      "recall": 0.99
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -63.2,
+      "recall": 0.98
+     }
+    ],
+    "tanpa_normalisasi": [
+     {
+      "klip": "jfk.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -15.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -25.5,
+      "recall": 0.97
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -35.5,
+      "recall": 0.93
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -45.5,
+      "recall": 0.82
+     },
+     {
+      "klip": "jfk.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -55.5,
+      "recall": 0.0
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -20.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -30.3,
+      "recall": 1.0
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -40.3,
+      "recall": 0.99
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -50.3,
+      "recall": 0.94
+     },
+     {
+      "klip": "LJ001-0001.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -60.3,
+      "recall": 0.91
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -32.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -42.1,
+      "recall": 0.99
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -52.1,
+      "recall": 0.98
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -62.1,
+      "recall": 0.71
+     },
+     {
+      "klip": "sample.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -72.1,
+      "recall": 0.04
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": 0,
+      "tingkat_ujaran_dbfs": -23.2,
+      "recall": 0.98
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -10,
+      "tingkat_ujaran_dbfs": -33.2,
+      "recall": 0.97
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -20,
+      "tingkat_ujaran_dbfs": -43.2,
+      "recall": 0.95
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -30,
+      "tingkat_ujaran_dbfs": -53.2,
+      "recall": 0.93
+     },
+     {
+      "klip": "silero_test.wav",
+      "gain_db": -40,
+      "tingkat_ujaran_dbfs": -63.2,
+      "recall": 0.47
+     }
+    ]
+   }
+  },
+  "detik": 28.3
+ },
+ "snr": {
+  "baris": [
+   {
+    "klip": "jfk.wav",
+    "derau": "tanpa",
+    "snr_nominal_db": null,
+    "snr_perkiraan_db": 21.0
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "putih",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 20.6
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "putih",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 17.7
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "putih",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 10.0
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "putih",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 5.3
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "putih",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": -0.2
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 20.5
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 17.6
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 9.8
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 4.1
+   },
+   {
+    "klip": "jfk.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": -0.3
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "tanpa",
+    "snr_nominal_db": null,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "putih",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "putih",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "putih",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "putih",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "putih",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "LJ001-0001.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": null
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "tanpa",
+    "snr_nominal_db": null,
+    "snr_perkiraan_db": 30.0
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "putih",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 27.1
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "putih",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 19.6
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "putih",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 9.6
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "putih",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 4.9
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "putih",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": 0.0
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 27.4
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 20.3
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 10.9
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 6.1
+   },
+   {
+    "klip": "sample.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": 1.4
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "tanpa",
+    "snr_nominal_db": null,
+    "snr_perkiraan_db": 29.3
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "putih",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 26.4
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "putih",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 19.5
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "putih",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 10.2
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "putih",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 5.3
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "putih",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": 0.3
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 30,
+    "snr_perkiraan_db": 26.6
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 20,
+    "snr_perkiraan_db": 19.9
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 10,
+    "snr_perkiraan_db": 10.4
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 5,
+    "snr_perkiraan_db": 5.7
+   },
+   {
+    "klip": "silero_test.wav",
+    "derau": "merah_muda",
+    "snr_nominal_db": 0,
+    "snr_perkiraan_db": 1.0
+   }
+  ],
+  "galat_median_db": -0.2,
+  "galat_abs_p90_db": 3.4,
+  "catatan": "klip asli sudah punya derau sendiri, jadi SNR sebenarnya sedikit di bawah nominal pada SNR tinggi"
+ },
+ "dtw": {
+  "regangan": [
+   0.8,
+   0.9,
+   1.1,
+   1.25,
+   1.5
+  ],
+  "rasio_warna_suara": [
+   0.85,
+   1.2
+  ],
+  "catatan": "isi-sama = klip yang sama diregangkan waktunya (+derau 10 dB, atau warna suara diubah lewat resampling); BUKAN penutur berbeda sungguhan",
+  "isi_sama_tanpa_ubah_suara": {
+   "latih": {
+    "n": 27,
+    "biaya": {
+     "min": 0.04,
+     "median": 0.1,
+     "maks": 0.504
+    },
+    "galat_rasio_persen": {
+     "median": 0.1,
+     "p90": 0.68,
+     "maks": 1.4
+    }
+   },
+   "uji": {
+    "n": 30,
+    "biaya": {
+     "min": 0.039,
+     "median": 0.212,
+     "maks": 0.472
+    },
+    "galat_rasio_persen": {
+     "median": 0.1,
+     "p90": 1.27,
+     "maks": 3.1
+    }
+   }
+  },
+  "isi_sama_suara_diubah": {
+   "latih": {
+    "n": 26,
+    "biaya": {
+     "min": 0.414,
+     "median": 0.532,
+     "maks": 0.62
+    },
+    "galat_rasio_persen": {
+     "median": 0.35,
+     "p90": 0.85,
+     "maks": 67.9
+    }
+   },
+   "uji": {
+    "n": 30,
+    "biaya": {
+     "min": 0.468,
+     "median": 0.51,
+     "maks": 0.561
+    },
+    "galat_rasio_persen": {
+     "median": 0.1,
+     "p90": 0.21,
+     "maks": 0.8
+    }
+   }
+  },
+  "isi_sama_latih": {
+   "n": 53,
+   "galat_rasio_persen": {
+    "median": 0.2,
+    "p90": 0.78,
+    "maks": 67.9
+   },
+   "galat_jalur_median_detik": {
+    "median": 0.02,
+    "p90": 0.04,
+    "maks": 1.51
+   },
+   "biaya": {
+    "min": 0.04,
+    "median": 0.436,
+    "maks": 0.62
+   }
+  },
+  "isi_beda_latih": {
+   "n": 6,
+   "biaya": {
+    "min": 0.587,
+    "median": 0.717,
+    "maks": 0.743
+   }
+  },
+  "isi_sama_uji": {
+   "n": 60,
+   "galat_rasio_persen": {
+    "median": 0.1,
+    "p90": 0.62,
+    "maks": 3.1
+   },
+   "galat_jalur_median_detik": {
+    "median": 0.02,
+    "p90": 0.04,
+    "maks": 0.07
+   },
+   "biaya": {
+    "min": 0.039,
+    "median": 0.47,
+    "maks": 0.561
+   }
+  },
+  "isi_beda_uji": {
+   "n": 6,
+   "biaya": {
+    "min": 0.62,
+    "median": 0.624,
+    "maks": 0.627
+   }
+  },
+  "ambang_biaya_dipilih_dari_latih": 0.58,
+  "akurasi_seimbang_latih": 0.953,
+  "galat_rasio_pada_yang_dinilai_andal": {
+   "latih": {
+    "median": 0.2,
+    "p90": 0.73,
+    "maks": 1.4
+   },
+   "uji": {
+    "median": 0.1,
+    "p90": 0.62,
+    "maks": 3.1
+   },
+   "n_latih": 48,
+   "n_uji": 60
+  },
+  "uji_dengan_ambang": {
+   "isi_sama_dinilai_andal": 1.0,
+   "isi_beda_dinilai_tak_andal": 1.0
+  },
+  "penaksir_tempo": {
+   "cara": "kemiringan jalur penyejajaran di bagian dalam (regresi linear)",
+   "tepi_dibuang_persen": 15,
+   "tepi_minimum_detik": 0.5,
+   "pembanding_lama": "rasio durasi ujaran awal-akhir (VAD); dipertahankan sebagai span_ratio, tidak dipakai sebagai tempo",
+   "penyapuan_tepi_pada_kasus_andal": {
+    "latih": {
+     "0.0": {
+      "n": 48,
+      "median": 0.17,
+      "p90": 3.61,
+      "maks": 4.68
+     },
+     "0.05": {
+      "n": 48,
+      "median": 0.17,
+      "p90": 3.61,
+      "maks": 4.68
+     },
+     "0.1": {
+      "n": 48,
+      "median": 0.24,
+      "p90": 3.02,
+      "maks": 4.11
+     },
+     "0.15": {
+      "n": 48,
+      "median": 0.24,
+      "p90": 0.73,
+      "maks": 1.4
+     },
+     "0.2": {
+      "n": 48,
+      "median": 0.24,
+      "p90": 1.14,
+      "maks": 2.22
+     },
+     "0.25": {
+      "n": 48,
+      "median": 0.24,
+      "p90": 1.18,
+      "maks": 2.82
+     }
+    },
+    "uji": {
+     "0.0": {
+      "n": 60,
+      "median": 0.06,
+      "p90": 0.33,
+      "maks": 1.68
+     },
+     "0.05": {
+      "n": 60,
+      "median": 0.06,
+      "p90": 0.31,
+      "maks": 1.5
+     },
+     "0.1": {
+      "n": 60,
+      "median": 0.1,
+      "p90": 0.33,
+      "maks": 1.99
+     },
+     "0.15": {
+      "n": 60,
+      "median": 0.08,
+      "p90": 0.65,
+      "maks": 3.1
+     },
+     "0.2": {
+      "n": 60,
+      "median": 0.12,
+      "p90": 1.05,
+      "maks": 6.33
+     },
+     "0.25": {
+      "n": 60,
+      "median": 0.11,
+      "p90": 0.85,
+      "maks": 9.27
+     }
+    }
+   },
+   "tepi_terbaik_pada_latih": 0.15,
+   "aturan_pemilihan": "galat maksimum terkecil pada kasus andal himpunan LATIH; seri: p90 terkecil. Himpunan uji hanya dilaporkan."
+  },
+  "galat_rasio_durasi_lama_pada_yang_dinilai_andal": {
+   "latih": {
+    "median": 0.5,
+    "p90": 16.8,
+    "maks": 17.1
+   },
+   "uji": {
+    "median": 0.6,
+    "p90": 3.9,
+    "maks": 4.9
+   }
+  },
+  "ambang_di_kode": 0.58,
+  "detik": 29.1
+ },
+ "visi": {
+  "bus_jpg": {
+   "jumlah_orang_terdeteksi": 4,
+   "acuan_pembacaan_manual": 4,
+   "per_orang": [
+    {
+     "kotak": [
+      671,
+      387,
+      810,
+      880
+     ],
+     "skor": 0.91,
+     "pose": "wajar"
+    },
+    {
+     "kotak": [
+      54,
+      400,
+      205,
+      894
+     ],
+     "skor": 0.89,
+     "pose": "wajar"
+    },
+    {
+     "kotak": [
+      221,
+      407,
+      347,
+      857
+     ],
+     "skor": 0.89,
+     "pose": "wajar"
+    },
+    {
+     "kotak": [
+      0,
+      555,
+      62,
+      881
+     ],
+     "skor": 0.45,
+     "pose": "wajar"
+    }
+   ]
+  },
+  "lantai_kebisingan_gambar_diam_goyang_1_3px": [
+   {
+    "orang": 0,
+    "kecepatan_tangan_rata2": 0.122,
+    "variasi_miring_derajat": 0.31,
+    "bingkai_terdeteksi": 1.0,
+    "peringatan": [
+     "banyak_orang_terdeteksi"
+    ]
+   },
+   {
+    "orang": 1,
+    "kecepatan_tangan_rata2": 0.359,
+    "variasi_miring_derajat": 0.93,
+    "bingkai_terdeteksi": 1.0,
+    "peringatan": []
+   },
+   {
+    "orang": 2,
+    "kecepatan_tangan_rata2": 0.395,
+    "variasi_miring_derajat": 0.5,
+    "bingkai_terdeteksi": 1.0,
+    "peringatan": [
+     "banyak_orang_terdeteksi"
+    ]
+   }
+  ],
+  "vtest_avi": {
+   "detik_video": 60,
+   "orang_median_per_bingkai": 6.0,
+   "jumlah_jejak": 53,
+   "jejak_terpilih": 19,
+   "tingkat_deteksi_pose": 0.558,
+   "peringatan": [
+    "banyak_orang_terdeteksi",
+    "pose_sulit_dideteksi"
+   ],
+   "xRT": 0.32
+  },
+  "detik": 38.1
+ },
+ "nada": {
+  "keterangan": "rentang nada (p90-p10, semiton) semestinya hampir tidak berubah saat seluruh nada digeser; ini uji kewajaran, bukan akurasi mutlak",
+  "hasil": [
+   {
+    "geser_semiton": -4,
+    "rentang_asli": 10.2,
+    "rentang_setelah": 10.4
+   },
+   {
+    "geser_semiton": 4,
+    "rentang_asli": 10.2,
+    "rentang_setelah": 9.6
+   }
+  ]
+ },
+ "stabilitas": {
+  "klip": [
+   "jfk.wav",
+   "LJ001-0001.wav",
+   "sample.wav",
+   "silero_test.wav"
+  ],
+  "kelompok_gangguan": [
+   "gain",
+   "derau_20dB",
+   "derau_10dB"
+  ],
+  "selisih_mutlak_p90": {
+   "gain": {
+    "pause_mean_s": 0.003,
+    "long_pauses_per_min": 0.0,
+    "onset_rate_per_s": 0.49,
+    "speech_ratio": 0.001,
+    "dynamic_range_db": 0.16,
+    "pitch_range_st": 0.0
+   },
+   "derau_20dB": {
+    "pause_mean_s": 0.025,
+    "long_pauses_per_min": 0.024,
+    "onset_rate_per_s": 1.093,
+    "speech_ratio": 0.03,
+    "dynamic_range_db": 3.83,
+    "pitch_range_st": 0.2
+   },
+   "derau_10dB": {
+    "pause_mean_s": 0.13,
+    "long_pauses_per_min": 0.169,
+    "onset_rate_per_s": 0.598,
+    "speech_ratio": 0.041,
+    "dynamic_range_db": 10.73,
+    "pitch_range_st": 1.03
+   }
+  },
+  "selisih_mutlak_maks": {
+   "gain": {
+    "pause_mean_s": 0.011,
+    "long_pauses_per_min": 0.0,
+    "onset_rate_per_s": 1.371,
+    "speech_ratio": 0.003,
+    "dynamic_range_db": 0.3,
+    "pitch_range_st": 0.0
+   },
+   "derau_20dB": {
+    "pause_mean_s": 0.032,
+    "long_pauses_per_min": 0.08,
+    "onset_rate_per_s": 1.349,
+    "speech_ratio": 0.033,
+    "dynamic_range_db": 3.9,
+    "pitch_range_st": 0.2
+   },
+   "derau_10dB": {
+    "pause_mean_s": 0.133,
+    "long_pauses_per_min": 0.19,
+    "onset_rate_per_s": 0.85,
+    "speech_ratio": 0.044,
+    "dynamic_range_db": 10.8,
+    "pitch_range_st": 1.1
+   }
+  },
+  "n_per_kelompok": {
+   "gain": {
+    "pause_mean_s": 8,
+    "long_pauses_per_min": 8,
+    "onset_rate_per_s": 8,
+    "speech_ratio": 8,
+    "dynamic_range_db": 8,
+    "pitch_range_st": 8
+   },
+   "derau_20dB": {
+    "pause_mean_s": 8,
+    "long_pauses_per_min": 8,
+    "onset_rate_per_s": 8,
+    "speech_ratio": 8,
+    "dynamic_range_db": 8,
+    "pitch_range_st": 8
+   },
+   "derau_10dB": {
+    "pause_mean_s": 8,
+    "long_pauses_per_min": 8,
+    "onset_rate_per_s": 8,
+    "speech_ratio": 8,
+    "dynamic_range_db": 8,
+    "pitch_range_st": 8
+   }
+  },
+  "lantai_disarankan": {
+   "pause_mean_s": 0.025,
+   "long_pauses_per_min": 0.024,
+   "onset_rate_per_s": 1.1,
+   "speech_ratio": 0.03,
+   "dynamic_range_db": 3.9,
+   "pitch_range_st": 0.2
+  },
+  "rapuh_terhadap_derau_10dB": [
+   "pause_mean_s",
+   "long_pauses_per_min",
+   "dynamic_range_db",
+   "pitch_range_st"
+  ],
+  "aturan": "lantai = maks(p90 gain, p90 derau 20 dB), 2 angka bermakna ke atas; rapuh bila p90 derau 10 dB > 2 x lantai"
+ },
+ "tempo": {
+  "audio_60_detik": {
+   "detik": 1.0,
+   "xRT": 0.017
+  }
+ },
+ "dibuat": "2026-11-14 07:29:32",
+ "quick": false,
+ "lingkungan": {
+  "python": "3.13.18",
+  "model_sha256": {
+   "silero_vad.onnx": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3",
+   "yolox_s.onnx": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+   "pose_landmark_full.tflite": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f"
+  },
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "librosa": "1.0.1",
+  "soundfile": "0.14.0",
+  "onnxruntime": "1.29.0",
+  "opencv-python-headless": "5.0.0.93",
+  "ai-edge-litert": "2.3.0"
+ }
+}

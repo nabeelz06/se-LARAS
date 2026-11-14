@@ -1,0 +1,13 @@
+node_modules/
+data/
+*.db
+*.db-wal
+*.db-shm
+.env
+__pycache__/
+*.pyc
+# data uji publik diunduh ulang oleh analyzer/evaluation/fetch_data.py (ukuran + lisensi masing-masing sumber)
+analyzer/evaluation/data/
+# hasil unggahan/rekaman dan keluaran e2e
+e2e/out/
+public.old/

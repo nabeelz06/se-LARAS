@@ -1,0 +1,9 @@
+# Klip contoh (fixture) untuk seed demo dan tes
+
+Dua klip 20 detik, `maestro_uji.mp4` dan `murid_uji.mp4`, **hanya untuk menguji pipa** (unggah → ffprobe → analisis → perbandingan). Bukan rekaman Ludruk dan tidak membuktikan akurasi pada panggung nyata. **Tidak ada foto atau rekaman orang di dalamnya.**
+
+- **Gambar:** penari "boneka" kartun (udeng, rompi, sampur) yang **digambar dengan kode** oleh tim se-LARAS, `make_fixtures.py` (OpenCV). Klip "maestro": gerak lengan pelan; klip "murid": lebih cepat dan lebih lebar. Karena kartun, detektor orang (YOLOX, dilatih pada foto) tidak mengenalinya; analisis memakai jalur cadangan dan menampilkan peringatan "Orang tidak terdeteksi; dipakai cara cadangan". Itu perilaku yang benar. Model pose tetap menghasilkan titik kunci pada gambar ini, tetapi **ketepatannya pada kartun tidak diukur** dan beberapa bingkai meleset.
+- **Suara:** pembacaan LJSpeech `LJ001-0001` (satu penutur; dinyatakan domain publik di AS oleh pengumpulnya, <https://keithito.com/LJ-Speech-Dataset/>) dengan keheningan digital disisipkan pada detik 2,5 / 5,9 / 8,0 dari suara sumber: 3 × 1,1 detik pada klip "maestro" dan 3 × 0,35 detik pada klip "murid". Isinya sama, jadi penyejajaran waktu (DTW) bisa diuji; ini **bukan** dua penutur berbeda.
+- **Membuat ulang:** `python3 analyzer/evaluation/fetch_data.py` (mengunduh suara sumber, sha256 diperiksa) lalu `python3 seed/fixtures/make_fixtures.py`. Keluaran bisa berbeda byte demi byte antar-versi ffmpeg; yang dikunci tes adalah angka ukurannya.
+- Status hak cipta suara: **perlu verifikasi** pada halaman sumber sebelum klip ini didistribusikan di luar repositori (`docs/DAFTAR_VERIFIKASI.md`). Gambar kartunnya dibuat oleh tim untuk proyek ini.
+- Angka yang diharapkan tes, diukur dari klip ini (bukan dari teori): jeda rata-rata ≈ 0,92 dtk (maestro) vs ≈ 0,34 dtk (murid); kecepatan tangan rata-rata ≈ 0,69 vs ≈ 1,45 (panjang badan/detik); rasio tempo ≈ 0,81 (rasio durasi ucapan ≈ 0,82).
