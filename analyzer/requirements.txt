@@ -3,6 +3,9 @@ numpy>=2.0
 scipy>=1.13
 librosa>=0.10
 soundfile>=0.12
-opencv-python-headless>=4.9
+# Varian *contrib* sengaja dipilih: jalur cadangan analisis gerak memakai cv2.HOGDescriptor (analyzer/posecore.py). Pada
+# OpenCV 5 modul itu tidak ada di paket "opencv-python-headless" (teramati saat CI pertama, 15 Nov 2026, versi 5.0.0.93)
+# tetapi ada di varian contrib. Jangan memasang varian opencv-* lain di lingkungan yang sama: semuanya berbagi satu direktori `cv2`.
+opencv-contrib-python-headless>=4.9
 onnxruntime>=1.18
 ai-edge-litert>=1.0

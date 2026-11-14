@@ -663,7 +663,7 @@ def environment():
 
     import verify_models
     out = {"python": platform.python_version(), "model_sha256": {n: verify_models.sha256_file(os.path.join(verify_models.MODELS, n)) for n in verify_models.load()}}
-    for pkg in ("numpy", "scipy", "librosa", "soundfile", "onnxruntime", "opencv-python-headless", "ai-edge-litert"):
+    for pkg in ("numpy", "scipy", "librosa", "soundfile", "onnxruntime", "opencv-python-headless", "opencv-contrib-python-headless", "ai-edge-litert"):
         try:
             out[pkg] = metadata.version(pkg)
         except metadata.PackageNotFoundError:

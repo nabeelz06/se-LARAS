@@ -81,6 +81,11 @@ class PoseTracker:
     @property
     def hog(self):
         if self._hog is None:
+            if not hasattr(cv2, "HOGDescriptor"):
+                raise RuntimeError(
+                    "OpenCV yang termuat tidak memiliki cv2.HOGDescriptor (dipakai jalur cadangan). Pasang dependensi dari "
+                    "analyzer/requirements.txt (opencv-contrib-python-headless) di lingkungan bersih; jangan campur varian opencv-*."
+                )
             self._hog = cv2.HOGDescriptor()
             self._hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
         return self._hog
