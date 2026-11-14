@@ -35,7 +35,7 @@ Video penelusuran 115 detik (keterangan "data contoh sintetis" tampil di setiap 
 | Pelajar: lihat unit (takarir, momen, kerangka gerak), rekam/unggah latihan dengan persetujuan per klip, lihat selisih deskriptif terhadap acuan maestro (tanpa skor gabungan) | **Tidak ada model ASR/AI yang dilatih pada data Ludruk.** Tidak ada korpus Ludruk/Suroboyoan publik yang ditemukan; lihat `docs/DATASET_DAN_PELATIHAN.md` |
 | Kamus 30 entri bersumber (status *draf* sampai disahkan maestro), pencarian bersumber, kelas + kode gabung, ruang admin, buku jejak berantai-hash | Akurasi pose/jeda **pada rekaman panggung Ludruk belum pernah diukur**. Evaluasi hanya pada data publik non-Ludruk (`docs/EVALUASI.md`) |
 | 46 tes Node, 73 tes Python (10 di antaranya dilewati bila data uji publik belum diunduh), uji e2e (alur maestro, alur pelajar via kamera palsu, 72 pemeriksaan halaman; axe-core 4.14.0 nol pelanggaran). Rincian dan batasnya: `docs/PENGUJIAN.md` | Teks Suroboyoan di antarmuka dan definisi kamus adalah **draf** menunggu penutur asli |
-| Dockerfile, docker-compose, CI GitHub Actions, Makefile | `docker build` dan CI GitHub Actions **belum pernah dijalankan** (tidak ada daemon Docker dan belum ada repositori git di lingkungan pengembangan) |
+| Dockerfile, docker-compose, CI GitHub Actions, Makefile | `docker build` dan CI GitHub Actions **belum pernah dijalankan** (tidak ada daemon Docker dan belum ada repositori git di lingkungan pengembangan). *Keadaan 14 Nov 2026; **pembaruan 15 Nov 2026:** setelah repositori dibuat, CI berjalan di GitHub. Run pertama gagal pada 1 tes (dependensi OpenCV), diperbaiki di commit `27a70b4`; run sesudahnya lulus (tes, `docker build` + `/healthz`, e2e). Rincian: [`VERIFIKASI.md`](VERIFIKASI.md) bagian 5* |
 
 ## Jalan cepat
 
